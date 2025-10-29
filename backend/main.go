@@ -90,15 +90,17 @@ func startHTTPServer(port string) {
 	http.HandleFunc("/journaling/dump", corsMiddleware(journalingDumpHandler))
 	http.HandleFunc("/file/read", corsMiddleware(readFileHandler))
 
-	// Determinar dirección de enlace: primero mirar variable de entorno BACKEND_BIND_ADDR
-	// Ejemplo de valor: "localhost:8080" o ":8080" para todas las interfaces
-	bindAddr := os.Getenv("BACKEND_BIND_ADDR")
-	if bindAddr == "" {
-		// Por defecto enlazamos a localhost:PORT para mayor seguridad (no todas las interfaces)
-		bindAddr = "localhost:" + port
-	}
+	// ***
+	// *** CAMBIO REALIZADO AQUÍ ***
+	// ***
+	// Ahora se enlaza a "todas las interfaces" (0.0.0.0)
+	// en lugar de solo a "localhost".
+	bindAddr := ":" + port
+	// ***
+	// *** FIN DEL CAMBIO ***
+	// ***
 
-	fmt.Printf(" Servidor  iniciado en http://%s\n", bindAddr)
+	fmt.Printf(" Servidor Proyecto 2 MIA iniciado en http://0.0.0.0:%s\n", port)
 	fmt.Println(" Esperando comandos desde el frontend...")
 
 	log.Fatal(http.ListenAndServe(bindAddr, nil))
@@ -416,7 +418,7 @@ func executeCommandHandler(w http.ResponseWriter, r *http.Request) {
 func healthHandler(w http.ResponseWriter, r *http.Request) {
 	response := map[string]string{
 		"status":  "ok",
-		"message": "Backend funcionando correctamente",
+		"message": "Backend Proyecto 2 MIA funcionando correctamente",
 		"version": "2.0",
 	}
 	sendJSONResponse(w, response, http.StatusOK)
