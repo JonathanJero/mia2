@@ -1,0 +1,639 @@
+🟢 Conectado al backend ExtreamFS
+
+🟢 Conectado al backend ExtreamFS
+
+✅ Archivo "archivoficial.smia" cargado exitosamente
+
+⚠️ Algunos comandos requieren autenticación. Por favor, inicia sesión.
+
+✅ Sesión iniciada: root@
+
+╰─➤Mkdisk -size=1 -unit=K -fit=FF -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia22:20:24
+
+Disco creado exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia' con tamaño 1024 bytes, ajuste 'FF' y firma 3141685930043356462.
+
+╰─➤fdisk -type=P -unit=b -name=Part1 -size=100 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:25
+
+Partición 'Part1' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia'.
+Tamaño: 100 bytes, Ajuste: BF, Posición: 512
+
+╰─➤fdisk -type=P -unit=b -name=Part2 -size=100 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:25
+
+Partición 'Part2' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia'.
+Tamaño: 100 bytes, Ajuste: BF, Posición: 612
+
+╰─➤fdisk -type=P -unit=b -name=Part3 -size=100 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:25
+
+Partición 'Part3' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia'.
+Tamaño: 100 bytes, Ajuste: BF, Posición: 712
+
+╰─➤fdisk -type=P -unit=b -name=Part4 -size=559 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:26
+
+Error: no hay espacio suficiente en el disco. Disponible: 212 bytes, Requerido: 559 bytes
+
+╰─➤fdisk -delete=fast -name=Part1 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia22:20:26
+
+🔧 Reorganizando particiones...
+🔧 Desfragmentando particiones...
+   📦 Moviendo partición 'Part2' de posición 612 a 512
+   📦 Moviendo partición 'Part3' de posición 712 a 612
+   ✅ Particiones reorganizadas exitosamente
+✅ Partición 'Part1' eliminada exitosamente (fast).
+
+╰─➤fdisk -delete=fast -name=Part3 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia22:20:26
+
+🔧 Reorganizando particiones...
+🔧 Desfragmentando particiones...
+   ℹ️  No es necesario desfragmentar (solo 1 partición activa)
+✅ Partición 'Part3' eliminada exitosamente (fast).
+
+╰─➤fdisk -add=-200 -size=10240 -unit=k -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -name=Part422:20:27
+
+Error: No se encontró la partición 'Part4'.
+
+╰─➤fdisk -type=P -unit=b -name=Part5 -size=100 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:27
+
+Partición 'Part5' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia'.
+Tamaño: 100 bytes, Ajuste: BF, Posición: 612
+
+╰─➤fdisk -type=P -unit=b -name=Part6 -size=100 -path=/home/jona/Calificacion_MIA/Discos/Disco2.mia -fit=BF22:20:27
+
+Partición 'Part6' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco2.mia'.
+Tamaño: 100 bytes, Ajuste: BF, Posición: 712
+
+╰─➤rep -id=531A -path=/home/jona/Calificacion_MIA/Reportes/diskB.jpg -name=disk22:20:27
+
+❌ Error: No se encontró una partición montada con ID '531A'. No hay particiones montadas actualmente.
+
+╰─➤________________22:20:28
+
+✅ Comando ejecutado exitosamente
+
+╰─➤Mkdisk -size=60 -unit=M -fit=FF -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia22:20:28
+
+Disco creado exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco1.mia' con tamaño 62914560 bytes, ajuste 'FF' y firma 2717389941152440388.
+
+╰─➤fdisk -type=P -unit=b -name=Part1 -size=20971520 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -fit=BF22:20:29
+
+Partición 'Part1' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco1.mia'.
+Tamaño: 20971520 bytes, Ajuste: BF, Posición: 512
+
+╰─➤fdisk -type=P -unit=k -name=Part2 -size=10240 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -fit=BF22:20:29
+
+Partición 'Part2' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco1.mia'.
+Tamaño: 10485760 bytes, Ajuste: BF, Posición: 20972032
+
+╰─➤fdisk -type=P -unit=M -name=Part3 -size=10 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -fit=BF22:20:29
+
+Partición 'Part3' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco1.mia'.
+Tamaño: 10485760 bytes, Ajuste: BF, Posición: 31457792
+
+╰─➤fdisk -type=P -unit=b -name=Part4 -size=10485760 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -fit=BF22:20:30
+
+Partición 'Part4' de tipo 'Primaria' creada exitosamente en '/home/jona/Calificacion_MIA/Discos/Disco1.mia'.
+Tamaño: 10485760 bytes, Ajuste: BF, Posición: 41943552
+
+╰─➤fdisk -delete=fast -name=Part3 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia22:20:30
+
+🔧 Reorganizando particiones...
+🔧 Desfragmentando particiones...
+   📦 Moviendo partición 'Part4' de posición 41943552 a 31457792
+   ✅ Particiones reorganizadas exitosamente
+✅ Partición 'Part3' eliminada exitosamente (fast).
+
+╰─➤fdisk -delete=fast -name=Part4 -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia22:20:30
+
+🔧 Reorganizando particiones...
+🔧 Desfragmentando particiones...
+   ℹ️  Las particiones ya están en posiciones óptimas
+✅ Partición 'Part4' eliminada exitosamente (fast).
+
+╰─➤fdisk -add=-500 -size=10240 -unit=k -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -name=Part222:20:30
+
+🔧 Reorganizando particiones para consolidar espacio libre...
+🔧 Desfragmentando particiones...
+   ℹ️  Las particiones ya están en posiciones óptimas
+✅ Se quitaron 512000 bytes de la partición 'Part2'.
+   Tamaño anterior: 10485760 bytes
+   Tamaño nuevo: 9973760 bytes
+   💾 Espacio disponible después: 31968768 bytes (30 MB)
+
+╰─➤fdisk -add=500 -unit=k -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -name=Part222:20:31
+
+✅ Se agregaron 512000 bytes a la partición 'Part2'.
+   Tamaño anterior: 9973760 bytes
+   Tamaño nuevo: 10485760 bytes
+   💾 Espacio disponible después: 31456768 bytes (29 MB)
+
+╰─➤rep -id=531A -path=/home/jona/Calificacion_MIA/Reportes/diskB.jpg -name=disk22:20:31
+
+❌ Error: No se encontró una partición montada con ID '531A'. No hay particiones montadas actualmente.
+
+╰─➤mount -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -name=Part122:20:31
+
+Partición 'Part1' (Primaria) montada exitosamente.
+   Disco: /home/jona/Calificacion_MIA/Discos/Disco1.mia
+   ID asignado: 531A
+   Correlativo: 1
+   Tamaño: 20971520 bytes
+
+╰─➤mount -path=/home/jona/Calificacion_MIA/Discos/Disco1.mia -name=Part222:20:32
+
+Partición 'Part2' (Primaria) montada exitosamente.
+   Disco: /home/jona/Calificacion_MIA/Discos/Disco1.mia
+   ID asignado: 532A
+   Correlativo: 2
+   Tamaño: 10485760 bytes
+
+╰─➤unmount -id=532A22:20:32
+
+Partición con ID '532A' desmontada exitosamente.
+
+╰─➤mkfs -type=full -id=531A -fs=3fs22:20:33
+
+Iniciando formateo FULL con sistema 3FS de la partición...
+Partición montada encontrada:
+   ID: 531A
+   Nombre: 'Part1'
+   Ruta: /home/jona/Calificacion_MIA/Discos/Disco1.mia
+   Tamaño: 20971520 bytes
+Calculando estructuras EXT3 para partición de 20971520 bytes...
+   - Número de inodos: 45184
+   - Número de bloques: 135552
+   - Entradas de Journaling: 50
+✅ Archivo 'users.txt' agregado en posición 2
+✅ Sistema de archivos 3FS creado exitosamente en partición 'Part1'.
+   ID: 531A
+   Tipo: FULL
+   Sistema: 3FS
+   Inodos: 45184
+   Bloques: 135552
+   Journaling: 50 entradas
+   Archivo users.txt creado en la raíz
+
+╰─➤login -user=root -pass=123 -id=531A22:20:33
+
+ℹ️ Ya hay una sesión activa
+
+╰─➤mkdir -p -path=/calificacion/U2025/9noSemestre22:20:33
+
+✅ Directorio 'calificacion' creado
+✅ Directorio 'U2025' creado
+✅ Directorio '9noSemestre' creado
+✅ Journal escrito: mkdir en /calificacion/U2025/9noSemestre (índice 0)
+Directorio '/calificacion/U2025/9noSemestre' creado exitosamente.
+
+╰─➤mkdir -p -path=/calificacion/U2025/6toSemestre/MIA22:20:33
+
+✅ Directorio '6toSemestre' creado
+✅ Directorio 'MIA' creado
+✅ Journal escrito: mkdir en /calificacion/U2025/6toSemestre/MIA (índice 1)
+Directorio '/calificacion/U2025/6toSemestre/MIA' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/MIA/lab.txt -size=522:20:34
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/MIA/lab.txt (índice 2)
+✅ Archivo '/calificacion/U2025/6toSemestre/MIA/lab.txt' creado exitosamente con 5 bytes.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/MIA/magis.txt -size=522:20:34
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/MIA/magis.txt (índice 3)
+✅ Archivo '/calificacion/U2025/6toSemestre/MIA/magis.txt' creado exitosamente con 5 bytes.
+
+╰─➤mkdir -path=/calificacion/U2025/6toSemestre/ARQUI22:20:34
+
+✅ Directorio 'ARQUI' creado
+✅ Journal escrito: mkdir en /calificacion/U2025/6toSemestre/ARQUI (índice 4)
+Directorio '/calificacion/U2025/6toSemestre/ARQUI' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/ARQUI/lab.txt -size=1022:20:35
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/ARQUI/lab.txt (índice 5)
+✅ Archivo '/calificacion/U2025/6toSemestre/ARQUI/lab.txt' creado exitosamente con 10 bytes.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/ARQUI/magis.txt -size=1022:20:35
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/ARQUI/magis.txt (índice 6)
+✅ Archivo '/calificacion/U2025/6toSemestre/ARQUI/magis.txt' creado exitosamente con 10 bytes.
+
+╰─➤mkdir -path=/calificacion/U2025/6toSemestre/COMPI22:20:35
+
+✅ Directorio 'COMPI' creado
+✅ Journal escrito: mkdir en /calificacion/U2025/6toSemestre/COMPI (índice 7)
+Directorio '/calificacion/U2025/6toSemestre/COMPI' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/COMPI/lab.txt -size=3022:20:36
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/COMPI/lab.txt (índice 8)
+✅ Archivo '/calificacion/U2025/6toSemestre/COMPI/lab.txt' creado exitosamente con 30 bytes.
+
+╰─➤mkfile -path=/calificacion/U2025/6toSemestre/COMPI/magis.txt -size=3022:20:36
+
+✅ Journal escrito: mkfile en /calificacion/U2025/6toSemestre/COMPI/magis.txt (índice 9)
+✅ Archivo '/calificacion/U2025/6toSemestre/COMPI/magis.txt' creado exitosamente con 30 bytes.
+
+╰─➤mkdir -path=/calificacion/TEST22:20:36
+
+✅ Directorio 'TEST' creado
+✅ Journal escrito: mkdir en /calificacion/TEST (índice 10)
+Directorio '/calificacion/TEST' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/TEST/carnet.txt -size=76822:20:36
+
+✅ Journal escrito: mkfile en /calificacion/TEST/carnet.txt (índice 11)
+✅ Archivo '/calificacion/TEST/carnet.txt' creado exitosamente con 768 bytes.
+
+╰─➤mkfile -path=/calificacion/TEST/borrar.txt -size=76822:20:37
+
+✅ Journal escrito: mkfile en /calificacion/TEST/borrar.txt (índice 12)
+✅ Archivo '/calificacion/TEST/borrar.txt' creado exitosamente con 768 bytes.
+
+╰─➤mkdir -path=/calificacion/TEST/BORRAME22:20:37
+
+✅ Directorio 'BORRAME' creado
+✅ Journal escrito: mkdir en /calificacion/TEST/BORRAME (índice 13)
+Directorio '/calificacion/TEST/BORRAME' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/TEST/cambiar_nombre.txt -size=76822:20:37
+
+⚠️  Nombre 'cambiar_nombre.txt' demasiado largo, se truncará a 12 caracteres.
+✅ Journal escrito: mkfile en /calificacion/TEST/cambiar_nombre.txt (índice 14)
+✅ Archivo '/calificacion/TEST/cambiar_nombre.txt' creado exitosamente con 768 bytes.
+
+╰─➤mkdir -path=/calificacion/COPY_TEST22:20:38
+
+✅ Directorio 'COPY_TEST' creado
+✅ Journal escrito: mkdir en /calificacion/COPY_TEST (índice 15)
+Directorio '/calificacion/COPY_TEST' creado exitosamente.
+
+╰─➤mkfile -path=/calificacion/COPY_TEST/moveme.txt -size=76822:20:38
+
+✅ Journal escrito: mkfile en /calificacion/COPY_TEST/moveme.txt (índice 16)
+✅ Archivo '/calificacion/COPY_TEST/moveme.txt' creado exitosamente con 768 bytes.
+
+╰─➤mkfile -path=/calificacion/TEST/nombre.txt22:20:38
+
+✅ Journal escrito: mkfile en /calificacion/TEST/nombre.txt (índice 17)
+✅ Archivo '/calificacion/TEST/nombre.txt' creado exitosamente con 0 bytes.
+
+╰─➤mkdir -path=/calificacion/MOVE22:20:39
+
+✅ Directorio 'MOVE' creado
+✅ Journal escrito: mkdir en /calificacion/MOVE (índice 18)
+Directorio '/calificacion/MOVE' creado exitosamente.
+
+╰─➤remove -path=/calificacion/TEST/borrar.txt22:20:39
+
+📄 Eliminando archivo '/calificacion/TEST/borrar.txt'...
+✅ Journal escrito: remove en /calificacion/TEST/borrar.txt (índice 19)
+✅ '/calificacion/TEST/borrar.txt' eliminado exitosamente.
+
+╰─➤remove -path=/calificacion/TEST/BORRAME22:20:39
+
+🗂️  Eliminando directorio '/calificacion/TEST/BORRAME' y su contenido...
+✅ Journal escrito: remove en /calificacion/TEST/BORRAME (índice 20)
+✅ '/calificacion/TEST/BORRAME' eliminado exitosamente.
+
+╰─➤edit -path=/calificacion/TEST/nombre.txt -contenido=/home/jona/Escritorio/NAME.txt22:20:40
+
+✅ Journal escrito: edit en /calificacion/TEST/nombre.txt (índice 21)
+✅ Archivo '/calificacion/TEST/nombre.txt' editado exitosamente.
+   📝 71 bytes escritos.
+
+╰─➤rename -path=/calificacion/TEST/cambiar_nombr -name=cambiado.txt22:20:40
+
+Error: no se pudo actualizar el nombre del archivo.
+
+╰─➤copy -path=/calificacion/TEST -destino=/calificacion/COPY_TEST22:20:40
+
+📋 Copiando '/calificacion/TEST' a '/calificacion/COPY_TEST'...
+✅ Copia completada exitosamente.
+   📄 Archivos/Carpetas copiados: 4
+
+╰─➤move -path=/calificacion/COPY_TEST/moveme.txt -destino=/calificacion/MOVE22:20:41
+
+📦 Moviendo '/calificacion/COPY_TEST/moveme.txt' a '/calificacion/MOVE'...
+✅ El archivo 'moveme.txt' fue movido exitosamente a '/calificacion/MOVE'.
+
+╰─➤find -path="/" -name="."22:20:41
+
+🔍 Buscando archivos/carpetas que coincidan con '.' en '/':
+
+No se encontraron archivos o carpetas que coincidan con el patrón.
+
+╰─➤chown -path=/calificacion -usuario=user_no_existe22:20:41
+
+Error: el usuario 'user_no_existe' no existe.
+
+╰─➤chmod -path=/calificacion/TEST -ugo=77722:20:41
+
+🔐 Cambiando permisos de '/calificacion/TEST' a 777...
+✅ Permisos cambiados exitosamente.
+   📄 Archivos/Carpetas modificados: 1
+
+╰─➤logout22:20:42
+
+Cerrando sesión del usuario '__auto__'.
+✅ Sesión cerrada exitosamente.
+
+╰─➤journaling -id=531A22:20:42
+
+========== DEBUG JOURNALING ==========
+Partición: Part1
+Tamaño de Journal struct: 114 bytes
+S_inode_start: 187084
+Journal start position: 179788
+Tamaño calculado para 64 journals: 7296 bytes
+Buscando 64 entradas de journaling...
+
+  [0] JCount=1
+  [0] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/U2025/9noSemestre'
+       Content: ''
+       IDate: 1761711616
+
+  [1] JCount=2
+  [1] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: ''
+       IDate: 1761711616
+
+  [2] JCount=3
+  [2] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '01234'
+       IDate: 1761711616
+
+  [3] JCount=4
+  [3] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '01234'
+       IDate: 1761711616
+
+  [4] JCount=5
+  [4] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: ''
+       IDate: 1761711616
+
+  [5] JCount=6
+  [5] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '0123456789'
+       IDate: 1761711616
+
+  [6] JCount=7
+  [6] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '0123456789'
+       IDate: 1761711616
+
+  [7] JCount=8
+  [7] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: ''
+       IDate: 1761711616
+
+  [8] JCount=9
+  [8] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '012345678901234567890123456789'
+       IDate: 1761711616
+
+  [9] JCount=10
+  [9] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/U2025/6toSemestre/'
+       Content: '012345678901234567890123456789'
+       IDate: 1761711616
+
+  [10] JCount=11
+  [10] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/TEST'
+       Content: ''
+       IDate: 1761711616
+
+  [11] JCount=12
+  [11] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/TEST/carnet.txt'
+       Content: '012345678901234567890123456789...'
+       IDate: 1761711616
+
+  [12] JCount=13
+  [12] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/TEST/borrar.txt'
+       Content: '012345678901234567890123456789...'
+       IDate: 1761711616
+
+  [13] JCount=14
+  [13] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/TEST/BORRAME'
+       Content: ''
+       IDate: 1761711616
+
+  [14] JCount=15
+  [14] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/TEST/cambiar_nombr'
+       Content: '012345678901234567890123456789...'
+       IDate: 1761711616
+
+  [15] JCount=16
+  [15] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/COPY_TEST'
+       Content: ''
+       IDate: 1761711616
+
+  [16] JCount=17
+  [16] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/COPY_TEST/moveme.t'
+       Content: '012345678901234567890123456789...'
+       IDate: 1761711616
+
+  [17] JCount=18
+  [17] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkfile'
+       Path: '/calificacion/TEST/nombre.txt'
+       Content: 'Archivo vacío'
+       IDate: 1761711616
+
+  [18] JCount=19
+  [18] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'mkdir'
+       Path: '/calificacion/MOVE'
+       Content: ''
+       IDate: 1761711616
+
+  [19] JCount=20
+  [19] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'remove'
+       Path: '/calificacion/TEST/borrar.txt'
+       Content: ''
+       IDate: 1761711616
+
+  [20] JCount=21
+  [20] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'remove'
+       Path: '/calificacion/TEST/BORRAME'
+       Content: ''
+       IDate: 1761711616
+
+  [21] JCount=22
+  [21] ✅ ENTRADA VÁLIDA ENCONTRADA!
+       Operation: 'edit'
+       Path: '/calificacion/TEST/nombre.txt'
+       Content: 'archivo txt de prueba NAME 202...'
+       IDate: 1761711616
+
+  [22] JCount=0
+  [23] JCount=0
+  [24] JCount=0
+  [25] JCount=0
+  [26] JCount=0
+  [27] JCount=0
+  [28] JCount=0
+  [29] JCount=0
+  [30] JCount=0
+  [31] JCount=0
+  [32] JCount=0
+  [33] JCount=0
+  [34] JCount=0
+  [35] JCount=0
+  [36] JCount=0
+  [37] JCount=0
+  [38] JCount=0
+  [39] JCount=0
+  [40] JCount=0
+  [41] JCount=0
+  [42] JCount=0
+  [43] JCount=0
+  [44] JCount=0
+  [45] JCount=0
+  [46] JCount=0
+  [47] JCount=0
+  [48] JCount=0
+  [49] JCount=0
+  [50] JCount=0
+  [51] JCount=0
+  [52] JCount=0
+  [53] JCount=0
+  [54] JCount=0
+  [55] JCount=0
+  [56] JCount=0
+  [57] JCount=0
+  [58] JCount=0
+  [59] JCount=0
+  [60] JCount=0
+  [61] JCount=0
+  [62] JCount=0
+  [63] JCount=293470208
+  [63] ⚠️  Entradas con timestamp inválido (IDate=0), saltando...
+
+
+========== RESUMEN ==========
+📊 Total de entradas válidas encontradas: 22
+📦 Entradas retornadas al frontend: 22
+==============================
+Journaling entries (count=22):
+[0] 1761711616 mkdir /calificacion/U2025/9noSemestre
+[1] 1761711616 mkdir /calificacion/U2025/6toSemestre/
+[2] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 01234
+[3] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 01234
+[4] 1761711616 mkdir /calificacion/U2025/6toSemestre/
+[5] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 0123456789
+[6] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 0123456789
+[7] 1761711616 mkdir /calificacion/U2025/6toSemestre/
+[8] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 012345678901234567890123456789
+[9] 1761711616 mkfile /calificacion/U2025/6toSemestre/
+    Content: 012345678901234567890123456789
+[10] 1761711616 mkdir /calificacion/TEST
+[11] 1761711616 mkfile /calificacion/TEST/carnet.txt
+    Content: 0123456789012345678901234567890123456789012345678901234567890123
+[12] 1761711616 mkfile /calificacion/TEST/borrar.txt
+    Content: 0123456789012345678901234567890123456789012345678901234567890123
+[13] 1761711616 mkdir /calificacion/TEST/BORRAME
+[14] 1761711616 mkfile /calificacion/TEST/cambiar_nombr
+    Content: 0123456789012345678901234567890123456789012345678901234567890123
+[15] 1761711616 mkdir /calificacion/COPY_TEST
+[16] 1761711616 mkfile /calificacion/COPY_TEST/moveme.t
+    Content: 0123456789012345678901234567890123456789012345678901234567890123
+[17] 1761711616 mkfile /calificacion/TEST/nombre.txt
+    Content: Archivo vacío
+[18] 1761711616 mkdir /calificacion/MOVE
+[19] 1761711616 remove /calificacion/TEST/borrar.txt
+[20] 1761711616 remove /calificacion/TEST/BORRAME
+[21] 1761711616 edit /calificacion/TEST/nombre.txt
+    Content: archivo txt de prueba NAME 202300353 Jonathan Jeronimo P1 MIA1 S
+
+╰─➤loss -id=531A22:20:42
+
+⚠️  ADVERTENCIA: Esta operación simulará una pérdida del sistema de archivos.
+   Se limpiarán los siguientes bloques en '531A':
+   - Bitmap de Inodos
+   - Bitmap de Bloques
+   - Área de Inodos
+   - Área de Bloques
+
+💾 Guardando estado actual en el journal de recuperación...
+   📦 Guardando área de inodos...
+   📦 Guardando área de bloques...
+   ✅ Estado guardado en el journal de recuperación
+   📊 Inodos guardados: 45184
+   📊 Bloques guardados: 135552
+
+🗑️  Limpiando bitmap de inodos...
+🗑️  Limpiando bitmap de bloques...
+🗑️  Limpiando área de inodos...
+🗑️  Limpiando área de bloques...
+🧹 Limpiando entradas de journaling...
+✅ Journaling limpiado completamente
+
+✅ Pérdida del sistema de archivos simulada exitosamente.
+
+💡 Para recuperar el sistema de archivos, use:
+   recovery -id=531A
+
+📊 Recargue el explorador de archivos y el journaling para ver los cambios
+
+╰─➤recovery -id=531A22:20:43
+
+🔄 Iniciando recuperación del sistema de archivos EXT3 en '531A'...
+
+📋 Información del último estado consistente:
+   Fecha: 2025-10-28 22:20:42
+   Inodos libres: 45182
+   Bloques libres: 135550
+
+🔧 Restaurando bitmaps desde el journal...
+🔧 Restaurando área de inodos...
+🔧 Restaurando área de bloques...
+
+✅ Sistema de archivos recuperado exitosamente.
+   📊 Inodos libres: 45182
+   📊 Bloques libres: 135550
+
+🎉 El sistema ha sido restaurado al último estado consistente.
+
+╰─➤login -user=root -pass=123 -id=531A22:20:43
+
+ℹ️ Ya hay una sesión activa
