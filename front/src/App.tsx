@@ -3,7 +3,11 @@ import Login from './components/Login';
 import FileSystemViewer from './components/FileSystemViewer';
 import JournalingViewer from './components/JournalingViewer';
 import './App.css';
-import { BACKEND_URL } from './config';
+import { BACKEND_URL } from './config'; // Asegúrate que config.ts esté importando bien
+
+// *** DEBUG ***
+// Esto nos dirá qué URL se compiló en el build de producción
+console.log('Aplicación iniciada. Usando BACKEND_URL:', BACKEND_URL);
 
 interface CommandResult {
   command: string;
@@ -56,6 +60,8 @@ const App: React.FC = () => {
   ];
 
   useEffect(() => {
+    // *** DEBUG ***
+    console.log('App.tsx montado. Llamando a checkBackendConnection...');
     checkBackendConnection();
   }, []);
 
@@ -66,20 +72,33 @@ const App: React.FC = () => {
   }, [output]);
 
   const checkBackendConnection = async () => {
+    // *** DEBUG ***
+    console.log(`Iniciando checkBackendConnection... Intentando conectar a: ${BACKEND_URL}/health`);
+    
     try {
       const response = await fetch(`${BACKEND_URL}/health`);
+      
+      // *** DEBUG ***
+      console.log('Respuesta de /health recibida:', response);
+
       if (response.ok) {
         setIsConnected(true);
         addToOutput('', '🟢 Conectado al backend', false);
-        // Intentar sincronizar la sesión del servidor con el frontend
+        // *** DEBUG ***
+        console.log('Conexión exitosa. Buscando sesión...');
         fetchSessionInfo();
       } else {
         setIsConnected(false);
         addToOutput('', '🔴 Error de conexión con el backend', true);
+        // *** DEBUG ***
+        console.warn('Respuesta de /health NO fue ok:', response.status, response.statusText);
       }
     } catch (error) {
       setIsConnected(false);
       addToOutput('', '🔴 Backend no disponible. Asegúrate de que esté ejecutándose.', true);
+      // *** DEBUG ***
+      // ¡Este es el log más importante! Si hay un error de CORS o de red, aparecerá aquí.
+      console.error('Error en fetch() a checkBackendConnection:', error);
     }
   };
 
@@ -263,9 +282,11 @@ const App: React.FC = () => {
   };
 
   const reconnectBackend = () => {
-    addToOutput('', 'Intentando reconectar...', false);
-    checkBackendConnection();
-  };
+      addToOutput('', 'Intentando reconectar...', false);
+      // *** DEBUG ***
+      console.log('Llamando a reconnectBackend...');
+      checkBackendConnection();
+    };
 
   return (
     <div className="app">
