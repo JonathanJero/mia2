@@ -20,7 +20,7 @@
 
 ##  Introducción
 
-ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo, permitiendo la gestión de discos virtuales, particiones, usuarios, grupos y archivos a través de una interfaz web moderna. El sistema implementa las estructuras de datos fundamentales del sistema de archivos EXT2 y proporciona comandos para su manipulación.
+Proyecto 2 es una aplicación web que simula un sistema de archivos EXT2 completo, permitiendo la gestión de discos virtuales, particiones, usuarios, grupos y archivos a través de una interfaz web moderna. El sistema implementa las estructuras de datos fundamentales del sistema de archivos EXT2 y proporciona comandos para su manipulación.
 
 ### Objetivos del Sistema
 
@@ -611,7 +611,7 @@ rep -id=A118 -path=/reports/ls.html -name=ls -path_file_ls=/home
 
 ```json
 {
-  "name": "extreamfs-frontend",
+  "name": "Proyecto 2-frontend",
   "dependencies": {
     "react": "^18.0.0",
     "typescript": "^5.0.0",
@@ -725,7 +725,7 @@ func generateHTMLReport(content, outputPath, reportType string) {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Reporte %s - ExtreamFS</title>
+        <title>Reporte %s - Proyecto 2</title>
         <style>/* CSS Styles */</style>
     </head>
     <body>%s</body>
@@ -917,8 +917,8 @@ func RecoveryFromJournal(mountedPart *MountedPartition) error {
 ```bash
 cd backend
 go mod tidy
-go build -o extreamfs main.go
-./extreamfs
+go build -o Proyecto 2 main.go
+./Proyecto 2
 ```
 
 #### Frontend

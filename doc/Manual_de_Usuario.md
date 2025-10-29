@@ -23,9 +23,9 @@
 
 ##  Introducción
 
-### ¿Qué es ExtreamFS?
+### ¿Qué es Proyecto 2?
 
-ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo. Te permite crear discos virtuales, gestionar particiones, crear usuarios y grupos, y manejar archivos y directorios tal como lo harías en un sistema Linux real.
+Proyecto 2 es una aplicación web que simula un sistema de archivos EXT2 completo. Te permite crear discos virtuales, gestionar particiones, crear usuarios y grupos, y manejar archivos y directorios tal como lo harías en un sistema Linux real.
 
 ### Características Principales
 
@@ -58,7 +58,7 @@ ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo
 
 ### Interfaz Principal
 
-La interfaz de ExtreamFS simula una terminal de comandos con las siguientes secciones:
+La interfaz de Proyecto 2 simula una terminal de comandos con las siguientes secciones:
 
 - **Área de comandos**: Donde escribes los comandos
 - **Historial**: Muestra los comandos ejecutados anteriormente
@@ -66,9 +66,9 @@ La interfaz de ExtreamFS simula una terminal de comandos con las siguientes secc
 - **Explorador visual**: Navegación gráfica del sistema de archivos
 - **Visor de journaling**: Muestra el historial de operaciones
 
-** CAPTURA 1: Interfaz principal de ExtreamFS**
+** CAPTURA 1: Interfaz principal de Proyecto 2**
 
-![Interfaz principal de ExtreamFS](./img/1.png)
+![alt text](image.png)
 
 La interfaz principal muestra la terminal simulada donde podrás ejecutar todos los comandos del sistema.
 
@@ -80,7 +80,6 @@ La interfaz principal muestra la terminal simulada donde podrás ejecutar todos 
 
 Para cargar un archivo con extensión .smia, haz clic en el botón "Cargar archivo (.smia)" y selecciona el archivo que deseas cargar desde tu sistema.
 
-![Botón de carga de archivo](./img/2.png)
 
 ### Sintaxis de Comandos
 
@@ -121,7 +120,7 @@ Para eliminar un disco que ya no necesites:
 rmdisk -path=/tmp/disco_ejemplo.mia
 ```
 
-![Gestión de discos](./img/3.png)
+
 
 ---
 
@@ -165,7 +164,6 @@ fdisk -delete=full -path=/tmp/disco_ejemplo.mia -name=Datos
 fdisk -add=5 -unit=M -path=/tmp/disco_ejemplo.mia -name=Sistema
 ```
 
-![Gestión de particiones](./img/4.png)
 
 ---
 
@@ -201,7 +199,7 @@ Para ver qué particiones están montadas:
 mount
 ```
 
-![Sistema de archivos](./img/5.png)
+
 
 ---
 
@@ -512,9 +510,8 @@ Ruta: /home/user/docs
 
 ### Tipos de Reportes Disponibles
 
-ExtreamFS puede generar varios tipos de reportes para analizar el estado del sistema:
+Proyecto 2 puede generar varios tipos de reportes para analizar el estado del sistema:
 
-![Reportes disponibles](./img/6.png)
 
 #### 1. Reporte de MBR
 
@@ -601,9 +598,6 @@ rep -id=501A -path=/home/reportes/archivo.txt -name=file -path_file_ls=/home/jua
 ### Visualizar Reportes
 
 Los reportes HTML se pueden abrir en cualquier navegador web:
-
-![Visualización de reportes HTML](./img/7.png)
-
 ---
 
 ##  Ejemplos Prácticos
