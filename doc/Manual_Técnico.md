@@ -1,5 +1,4 @@
-# Manual Técnico - Sistema de Archivos EXT2 Simulado
-## ExtreamFS v2.0
+# Manual Técnico 
 
 ---
 
@@ -19,7 +18,7 @@
 
 ---
 
-## 🚀 Introducción
+##  Introducción
 
 ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo, permitiendo la gestión de discos virtuales, particiones, usuarios, grupos y archivos a través de una interfaz web moderna. El sistema implementa las estructuras de datos fundamentales del sistema de archivos EXT2 y proporciona comandos para su manipulación.
 
@@ -36,18 +35,18 @@ ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo
 
 ### Características Principales v2.0
 
-- ✅ **Journaling completo**: Sistema de registro de operaciones con recuperación
-- ✅ **Operaciones avanzadas**: copy, move, rename, find, chmod, chown, chgrp, edit
-- ✅ **Explorador visual**: Navegación gráfica del sistema de archivos en tiempo real
-- ✅ **Edición de archivos**: Modificación de contenido existente
-- ✅ **Búsqueda de archivos**: Localización rápida por nombre
-- ✅ **Control de permisos**: Gestión completa de permisos UGO (User, Group, Other)
-- ✅ **Recuperación ante fallos**: Sistema de recovery basado en journal
-- ✅ **Visor de journaling**: Interface visual para auditar operaciones
+-  **Journaling completo**: Sistema de registro de operaciones con recuperación
+-  **Operaciones avanzadas**: copy, move, rename, find, chmod, chown, chgrp, edit
+-  **Explorador visual**: Navegación gráfica del sistema de archivos en tiempo real
+-  **Edición de archivos**: Modificación de contenido existente
+-  **Búsqueda de archivos**: Localización rápida por nombre
+- **Control de permisos**: Gestión completa de permisos UGO (User, Group, Other)
+-  **Recuperación ante fallos**: Sistema de recovery basado en journal
+-  **Visor de journaling**: Interface visual para auditar operaciones
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+##  Arquitectura del Sistema
 
 ### Diagrama de Arquitectura General
 
@@ -141,7 +140,7 @@ type APIResponse struct {
 
 ---
 
-## 📊 Estructuras de Datos
+##  Estructuras de Datos
 
 ### Master Boot Record (MBR)
 
@@ -1138,20 +1137,3 @@ curl -X POST localhost:8080/command \
 - Postman (Testing API)
 - GraphViz (Visualización de reportes)
 
----
-
-## 🔗 Referencias
-
-1. **EXT2 File System**: [https://www.nongnu.org/ext2-doc/ext2.html](https://www.nongnu.org/ext2-doc/ext2.html)
-2. **EXT3 Journaling**: [https://en.wikipedia.org/wiki/Ext3](https://en.wikipedia.org/wiki/Ext3)
-3. **Go Binary I/O**: [https://pkg.go.dev/encoding/binary](https://pkg.go.dev/encoding/binary)
-4. **React Documentation**: [https://react.dev](https://react.dev)
-5. **TypeScript Handbook**: [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/)
-6. **Gin Framework**: [https://gin-gonic.com/docs/](https://gin-gonic.com/docs/)
-
----
-
-**Versión del Manual:** 2.0  
-**Última Actualización:** 2024  
-**Autor:** [Tu Nombre]  
-**Proyecto:** ExtreamFS - Sistema de Archivos EXT2/EXT3

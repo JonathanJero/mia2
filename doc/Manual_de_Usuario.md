@@ -1,5 +1,4 @@
-# Manual de Usuario - ExtreamFS v2.0
-## Sistema de Archivos EXT2 Simulado
+# Manual de Usuario 
 
 ---
 
@@ -22,7 +21,7 @@
 
 ---
 
-## 🚀 Introducción
+##  Introducción
 
 ### ¿Qué es ExtreamFS?
 
@@ -30,16 +29,16 @@ ExtreamFS es una aplicación web que simula un sistema de archivos EXT2 completo
 
 ### Características Principales
 
-- ✅ **Creación de discos virtuales**: Simula discos duros reales
-- ✅ **Gestión de particiones**: Crea y administra particiones primarias, extendidas y lógicas
-- ✅ **Sistema EXT2 completo**: Implementación fiel del sistema de archivos EXT2
-- ✅ **Usuarios y grupos**: Sistema completo de autenticación y permisos
-- ✅ **Journaling**: Sistema de registro de operaciones con recuperación
-- ✅ **Explorador visual**: Interfaz gráfica para navegar archivos
-- ✅ **Operaciones avanzadas**: Copiar, mover, renombrar, buscar archivos
-- ✅ **Control de permisos**: chmod, chown, chgrp
-- ✅ **Reportes visuales**: Genera reportes detallados en HTML, texto y gráficos
-- ✅ **Interfaz intuitiva**: Terminal simulada y explorador gráfico
+-  **Creación de discos virtuales**: Simula discos duros reales
+-  **Gestión de particiones**: Crea y administra particiones primarias, extendidas y lógicas
+-  **Sistema EXT2 completo**: Implementación fiel del sistema de archivos EXT2
+-  **Usuarios y grupos**: Sistema completo de autenticación y permisos
+-  **Journaling**: Sistema de registro de operaciones con recuperación
+-  **Explorador visual**: Interfaz gráfica para navegar archivos
+-  **Operaciones avanzadas**: Copiar, mover, renombrar, buscar archivos
+-  **Control de permisos**: chmod, chown, chgrp
+-  **Reportes visuales**: Genera reportes detallados en HTML, texto y gráficos
+-  **Interfaz intuitiva**: Terminal simulada y explorador gráfico
 
 ### Requisitos del Sistema
 
@@ -67,7 +66,7 @@ La interfaz de ExtreamFS simula una terminal de comandos con las siguientes secc
 - **Explorador visual**: Navegación gráfica del sistema de archivos
 - **Visor de journaling**: Muestra el historial de operaciones
 
-**📸 CAPTURA 1: Interfaz principal de ExtreamFS**
+** CAPTURA 1: Interfaz principal de ExtreamFS**
 
 ![Interfaz principal de ExtreamFS](./img/1.png)
 
@@ -75,7 +74,7 @@ La interfaz principal muestra la terminal simulada donde podrás ejecutar todos 
 
 ---
 
-## 🎯 Primeros Pasos
+##  Primeros Pasos
 
 ### Carga un archivo con extensión .smia
 
@@ -96,7 +95,7 @@ comando -parametro1=valor1 -parametro2=valor2
 
 ---
 
-## 💾 Gestión de Discos
+##  Gestión de Discos
 
 ### Crear un Disco Virtual
 
@@ -126,7 +125,7 @@ rmdisk -path=/tmp/disco_ejemplo.mia
 
 ---
 
-## 🗂️ Gestión de Particiones
+##  Gestión de Particiones
 
 ### Crear Particiones
 
@@ -261,7 +260,7 @@ rmgrp -name=usuarios
 
 ---
 
-## 📁 Archivos y Directorios
+##  Archivos y Directorios
 
 ### Crear Directorios
 
@@ -420,7 +419,7 @@ find -path=/home -name=*.txt
 
 ---
 
-## 📜 Journaling y Recuperación
+##  Journaling y Recuperación
 
 ### ¿Qué es el Journaling?
 
@@ -434,21 +433,21 @@ El sistema de journaling registra todas las operaciones realizadas en el sistema
 Desde la interfaz web, haz clic en el botón **"Ver Journaling"** para abrir el visor de journaling.
 
 El visor muestra:
-- 📝 **Operación realizada**: mkfile, mkdir, edit, remove, etc.
-- 📂 **Ruta del archivo/directorio**
-- 📄 **Contenido** (si aplica)
-- 🕐 **Fecha y hora**
-- 👤 **Usuario** que realizó la operación
-- 🔒 **Permisos** aplicados
+-  **Operación realizada**: mkfile, mkdir, edit, remove, etc.
+-  **Ruta del archivo/directorio**
+-  **Contenido** (si aplica)
+-  **Fecha y hora**
+-  **Usuario** que realizó la operación
+-  **Permisos** aplicados
 
 **Ejemplo de entrada de journal:**
 
 ```
 mkfile                    20/10/2025, 23:56:16
-📂 /home/user/docs/test1.txt
+ /home/user/docs/test1.txt
 Contenido: 0123456789012345678901234567890123456789...
-👤 Usuario: root
-🔒 Permisos: 664
+ Usuario: root
+ Permisos: 664
 ```
 
 ### Recuperación ante Pérdidas
@@ -469,11 +468,11 @@ Para probar la función de recuperación, puedes simular una pérdida de datos e
 loss -id=501A
 ```
 
-**⚠️ Advertencia:** Esto eliminará todo el historial de operaciones y no se podrá recuperar.
+** Advertencia:** Esto eliminará todo el historial de operaciones y no se podrá recuperar.
 
 ---
 
-## 🗂️ Explorador de Archivos Visual
+##  Explorador de Archivos Visual
 
 ### Acceso al Explorador
 
@@ -489,7 +488,7 @@ Desde la interfaz principal, haz clic en **"Abrir Explorador de Archivos"** para
 ### Visualización de Información
 
 Cada archivo/directorio muestra:
-- 📄/📁 **Icono**: Tipo de elemento
+- **Icono**: Tipo de elemento
 - **Nombre**: Nombre del archivo o directorio
 - **Tamaño**: En bytes
 - **Permisos**: En formato rwx (ej: rw-r--r--)
@@ -499,17 +498,17 @@ Cada archivo/directorio muestra:
 **Ejemplo de vista:**
 
 ```
-📁 Particion1
+ Particion1
 Ruta: /home/user/docs
 
-📄 documento.txt      1024 B  rw-r--r--  👤 user  👥 users
-📁 proyectos           512 B  rwxr-xr-x  👤 user  👥 users
-📄 notas.md            256 B  rw-rw-r--  👤 user  👥 users
+ documento.txt      1024 B  rw-r--r--  👤 user  👥 users
+ proyectos           512 B  rwxr-xr-x  👤 user  👥 users
+ notas.md            256 B  rw-rw-r--  👤 user  👥 users
 ```
 
 ---
 
-## 📊 Generación de Reportes
+##  Generación de Reportes
 
 ### Tipos de Reportes Disponibles
 
@@ -607,7 +606,7 @@ Los reportes HTML se pueden abrir en cualquier navegador web:
 
 ---
 
-## 💡 Ejemplos Prácticos
+##  Ejemplos Prácticos
 
 ### Ejemplo 1: Configuración Inicial Completa
 

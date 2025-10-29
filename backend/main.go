@@ -98,7 +98,7 @@ func startHTTPServer(port string) {
 		bindAddr = "localhost:" + port
 	}
 
-	fmt.Printf(" Servidor ExtreamFS iniciado en http://%s\n", bindAddr)
+	fmt.Printf(" Servidor  iniciado en http://%s\n", bindAddr)
 	fmt.Println(" Esperando comandos desde el frontend...")
 
 	log.Fatal(http.ListenAndServe(bindAddr, nil))
@@ -416,7 +416,7 @@ func executeCommandHandler(w http.ResponseWriter, r *http.Request) {
 func healthHandler(w http.ResponseWriter, r *http.Request) {
 	response := map[string]string{
 		"status":  "ok",
-		"message": "Backend ExtreamFS funcionando correctamente",
+		"message": "Backend funcionando correctamente",
 		"version": "2.0",
 	}
 	sendJSONResponse(w, response, http.StatusOK)

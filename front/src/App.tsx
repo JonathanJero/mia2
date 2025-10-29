@@ -44,7 +44,6 @@ const App: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const outputRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const lineNumbersRef = useRef<HTMLDivElement>(null);
 
   // BACKEND_URL is provided by src/config.ts (VITE_BACKEND_URL or fallback to localhost:8080)
 
@@ -66,18 +65,12 @@ const App: React.FC = () => {
     }
   }, [output]);
 
-  const handleTextareaScroll = () => {
-    if (textareaRef.current && lineNumbersRef.current) {
-      lineNumbersRef.current.scrollTop = textareaRef.current.scrollTop;
-    }
-  };
-
   const checkBackendConnection = async () => {
     try {
       const response = await fetch(`${BACKEND_URL}/health`);
       if (response.ok) {
         setIsConnected(true);
-        addToOutput('', '🟢 Conectado al backend ExtreamFS', false);
+        addToOutput('', '🟢 Conectado al backend', false);
         // Intentar sincronizar la sesión del servidor con el frontend
         fetchSessionInfo();
       } else {
@@ -86,7 +79,7 @@ const App: React.FC = () => {
       }
     } catch (error) {
       setIsConnected(false);
-      addToOutput('', '🔴 Backend no disponible. Asegúrate de que esté ejecutándose en puerto 8080', true);
+      addToOutput('', '🔴 Backend no disponible. Asegúrate de que esté ejecutándose.', true);
     }
   };
 
@@ -304,9 +297,8 @@ const App: React.FC = () => {
       <header className="header">
         <div className="header-content">
           <h1 className="title">
-            <span className="title-icon">⚡</span>
-            ExtreamFS
-            <span className="title-version"></span>
+            <span className="title-icon">📚</span>
+            Proyecto 2 MIA
           </h1>
           <div className="header-actions">
             <div className="status-indicator">
@@ -397,17 +389,9 @@ const App: React.FC = () => {
               className="commands-textarea"
               value={commands}
               onChange={(e) => setCommands(e.target.value)}
-              onScroll={handleTextareaScroll} 
               placeholder="# Escribe tus comandos aquí..."
               spellCheck={false}
             />
-            <div ref={lineNumbersRef} className="line-numbers"> 
-              {commands.split('\n').map((_, index) => (
-                <div key={index} className="line-number">
-                  {index + 1}
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="panel-footer">
@@ -465,7 +449,7 @@ const App: React.FC = () => {
                 >
                   {result.command && (
                     <div className="command-line">
-                      <span className="prompt">╰─➤</span>
+                      <span className="prompt">➤</span>
                       <span className="command">{result.command}</span>
                       <span className="timestamp">{result.timestamp}</span>
                     </div>
@@ -483,7 +467,7 @@ const App: React.FC = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <p>ExtreamFS @ 2025 - {isConnected ? '🟢 Conectado' : '🔴 Desconectado'}</p>
+          <p>Proyecto 2 MIA @ 2025 - {isConnected ? '🟢 Conectado' : '🔴 Desconectado'}</p>
           <div className="footer-stats">
             <span>Comandos: {commands.split('\n').filter(line => line.trim() && !line.trim().startsWith('#')).length}</span>
             <span>Salidas: {output.length}</span>
